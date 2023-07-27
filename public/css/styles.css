@@ -1,0 +1,15 @@
+:root{
+    --bs-font-sans-sarif: 'Rubik', sans-sarif;
+
+}
+/* .container-xxl{
+    max-width: 1530px;
+
+} */
+
+body{
+    background-image: url("https://us.123rf.com/450wm/yuliamalinovskaya/yuliamalinovskaya1601/yuliamalinovskaya160100132/51137936-food-and-kitchen-seamless-pattern-cute-background-with-line-icons-for-culinary-theme-vector.jpg");
+    background-color: rgb(243, 243, 243);
+}
+
+a{color: var(--bs-dark);}
