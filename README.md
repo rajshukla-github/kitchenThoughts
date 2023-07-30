@@ -1,6 +1,9 @@
 # kitchenThoughts
-This is a food blogging website built using Node.js and MongoDB
-```This project is still in production...```
+Step 1: 
+``Download Node.js``
+
+Step2: clone this repository
+``git clone``
 
 
 
