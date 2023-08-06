@@ -23,6 +23,41 @@ exports.HomePage = async(req, res)=>{
       
 }
 
+/**
+ * GET / categories
+ * Categories
+ */
+
+exports.exploreCategories = async(req, res)=>{
+
+
+        try {
+                const limitNumber = 20;
+                const categories = await Category.find({}).limit(limitNumber);
+                res.render('categories',{title: 'Categories',categories });
+
+
+        } catch (error) {
+                res.satus(500).send({message : error.message || "Error Occured"});
+        }
+        
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
