@@ -28,16 +28,16 @@
 
     <% if(categories != ''){ %>
         <% categories.forEach(function(category, index){  %>
-    <a href="/categories/<%- category.name%>" class="col text-center category__link">
+    <a href="/categories/<%- category.name %>" class="col text-center category__link">
         <div class="category__img shadow">
-            <img src="<%- category.image%>" alt="<%- category.name%>" loading="lazy">
+            <img src="<%- category.image %>" alt="<%- category.name %>" loading="lazy">
         </div>
-        <div class="pt-1"><%- category.name%></div>
+        <div class="pt-1"><%- category.name %></div>
     </a>
 <% }) %>
-  <%}%>  
+  <% } %>  
    
-    <a href="/category" class="col text-center category__link">
+    <a href="/categories/" class="col text-center category__link">
         <div class="category__img shadow">
             <img src="https://c1.wallpaperflare.com/preview/166/884/864/skewer-kebab-barbecue-food.jpg" alt="view all" loading="lazy">
         </div>
