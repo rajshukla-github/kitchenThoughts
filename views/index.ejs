@@ -24,46 +24,25 @@
 
 <!-- category card -- start -->
 <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4" >
+
+
+    <% if(categories != ''){ %>
+        <% categories.forEach(function(category, index){  %>
     <a href="#" class="col text-center category__link">
         <div class="category__img shadow">
-            <img src="https://c4.wallpaperflare.com/wallpaper/374/404/846/brown-bird-perching-during-daytime-wren-wren-wallpaper-preview.jpg" alt="burger" loading="lazy">
+            <img src="<%- category.image%>" alt="<%- category.name%>" loading="lazy">
         </div>
-        <div class="pt-1">Burger</div>
+        <div class="pt-1"><%- category.name%></div>
     </a>
-    <a href="#" class="col text-center category__link">
-        <div class="category__img shadow">
-            <img src="https://c4.wallpaperflare.com/wallpaper/234/543/684/food-pizza-wallpaper-preview.jpg" alt="burger" loading="lazy">
-        </div>
-        <div class="pt-1">Burger</div>
-    </a>
-    <a href="#" class="col text-center category__link">
-        <div class="category__img shadow">
-            <img src="https://c4.wallpaperflare.com/wallpaper/269/901/198/chicken-still-life-food-weapon-wallpaper-preview.jpg" alt="burger" loading="lazy">
-        </div>
-        <div class="pt-1">Burger</div>
-    </a>
-    <a href="#" class="col text-center category__link">
-        <div class="category__img shadow">
-            <img src="https://c4.wallpaperflare.com/wallpaper/100/133/95/food-dessert-cake-sweets-wallpaper-preview.jpg" alt="burger" loading="lazy">
-        </div>
-        <div class="pt-1">Burger</div>
-    </a>
-    <a href="#" class="col text-center category__link">
-        <div class="category__img shadow">
-            <img src="https://c4.wallpaperflare.com/wallpaper/484/98/442/cake-sweets-food-wallpaper-preview.jpg" alt="burger" loading="lazy">
-        </div>
-        <div class="pt-1">Burger</div>
-    </a>
+<% }) %>
+  <%}%>  
+   
     <a href="/category" class="col text-center category__link">
         <div class="category__img shadow">
             <img src="https://c1.wallpaperflare.com/preview/166/884/864/skewer-kebab-barbecue-food.jpg" alt="view all" loading="lazy">
         </div>
         <div class="pt-1">View all</div>
     </a>
-    
-
-
-
 </div>
 
 
