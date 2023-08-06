@@ -1,69 +1,38 @@
-require('../models/database');
-const Category = require('../models/Category');
-
+require("../models/database");
+const Category = require("../models/Category");
 
 /**
  * GET /
  * Homepage
  */
 
-exports.HomePage = async(req, res)=>{
-
-
-        try {
-                const limitNumber = 5;
-                const categories = await Category.find({}).limit(limitNumber);
-                res.render('index',{title: 'HomePage',categories });
-
-
-        } catch (error) {
-                res.satus(500).send({message : error.message || "Error Occured"});
-        }
-        
-      
-}
+exports.HomePage = async (req, res) => {
+  try {
+    const limitNumber = 5;
+    const categories = await Category.find({}).limit(limitNumber);
+    // console.log("Categories: ",categories);
+    res.render("index", { title: "HomePage", categories });
+  } catch (error) {
+    res.satus(500).send({ message: error.message || "Error Occured" });
+  }
+};
 
 /**
  * GET / categories
  * Categories
  */
 
-exports.exploreCategories = async(req, res)=>{
+exports.exploreCategories = async (req, res) => {
+  try {
+    const limitNumber = 20;
+    const categories = await Category.find({}).limit(limitNumber);
+    res.render("categories", { title: "Categories", categories });
+  } catch (error) {
+    res.satus(500).send({ message: error.message || "Error Occured" });
+  }
+};
 
-
-        try {
-                const limitNumber = 20;
-                const categories = await Category.find({}).limit(limitNumber);
-                res.render('categories',{title: 'Categories',categories });
-
-
-        } catch (error) {
-                res.satus(500).send({message : error.message || "Error Occured"});
-        }
-        
-      
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// async function insertDymmyCatergoryData(
-
-// ){
+// async function insertDymmyCatergoryData(){
 
 // try {
 //         await Category.insertMany(
@@ -90,12 +59,11 @@ exports.exploreCategories = async(req, res)=>{
 
 //         },
 
-
 // ]);
-        
+
 // } catch (error) {
 //         console.log('err',+ error);
-        
+
 // }
 // }
 // insertDymmyCatergoryData();
